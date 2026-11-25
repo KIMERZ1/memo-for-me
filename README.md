@@ -23,6 +23,17 @@ scripts/             앱 아이콘 생성
 docs/DESIGN.md       설계서
 ```
 
+## 설치 (앱으로 쓰기)
+필요한 것: macOS 14 이상, Xcode 26, XcodeGen (`brew install xcodegen`).
+
+```bash
+git clone https://github.com/KIMERZ1/memo-for-me.git
+cd memo-for-me
+./scripts/install.sh
+```
+
+소스에서 Release로 빌드해 `/Applications/Memo4Me.app`에 설치하고 실행합니다. 메뉴바 앱이라 독에는 나타나지 않으며, Launchpad/Spotlight에서 열 수 있습니다. 업데이트는 `git pull` 후 같은 스크립트를 다시 실행하세요. 설치 폴더를 바꾸려면 `./scripts/install.sh ~/Applications`.
+
 ## 빌드와 실행
 필요한 것: Xcode 26, [XcodeGen](https://github.com/yonaskolb/XcodeGen), macOS 14 이상.
 
