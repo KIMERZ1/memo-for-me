@@ -21,7 +21,7 @@ public struct NotesFolderPointer: Sendable {
         }
         let url = folder.appendingPathComponent("sticky-source.json")
         guard !FileManager.default.fileExists(atPath: url.path) else { return }
-        let doc: [String: Any] = ["app": "메모지", "app_version": appVersion, "contract": 1, "feed": ChangeLog.fileName]
+        let doc: [String: Any] = ["app": "Memo4Me", "app_version": appVersion, "contract": 1, "feed": ChangeLog.fileName]
         var data = try JSONSerialization.data(withJSONObject: doc, options: [.sortedKeys])
         data.append(0x0A)
         try data.write(to: url, options: .atomic)

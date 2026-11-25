@@ -1,4 +1,4 @@
-name: StickyNotes
+name: Memo4Me
 options:
   bundleIdPrefix: com.kimerz
   deploymentTarget:
@@ -7,14 +7,14 @@ packages:
   StickyCore:
     path: .
 targets:
-  StickyNotes:
+  Memo4Me:
     type: application
     platform: macOS
     sources: [App]
     dependencies:
       - package: StickyCore
     entitlements:
-      path: App/StickyNotes.entitlements
+      path: App/Memo4Me.entitlements
       properties:
         com.apple.security.app-sandbox: true
         com.apple.security.files.user-selected.read-write: true
@@ -22,8 +22,8 @@ targets:
     info:
       path: App/Info.plist
       properties:
-        CFBundleName: 메모지
-        CFBundleDisplayName: 메모지
+        CFBundleName: Memo4Me
+        CFBundleDisplayName: Memo4Me
         LSUIElement: true
         LSApplicationCategoryType: public.app-category.productivity
         NSFaceIDUsageDescription: 보안 메모지를 열기 위해 인증합니다.
@@ -31,7 +31,7 @@ targets:
         CFBundleVersion: "1"
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.kimerz.stickynotes
+        PRODUCT_BUNDLE_IDENTIFIER: com.kimerz.memo-for-me
         SWIFT_VERSION: "5.0"
         SWIFT_STRICT_CONCURRENCY: minimal
         ENABLE_HARDENED_RUNTIME: YES

@@ -1,6 +1,6 @@
-# memo-for-me
+# Memo4Me
 
-macOS 메뉴바 전용 메모지 앱입니다. 데스크톱의 특정 화면(Space)에 메모를 붙여 두고 쓰며, 일반 메모는 `.md` 파일로, 보안 메모는 암호화해서 저장합니다.
+macOS 메뉴바 전용 메모지 앱입니다(저장소 이름 `memo-for-me`). 데스크톱의 특정 화면(Space)에 메모를 붙여 두고 쓰며, 일반 메모는 `.md` 파일로, 보안 메모는 암호화해서 저장합니다.
 
 이 앱은 Notion도 Claude도 모릅니다. 메모를 **정해진 규격의 폴더**에 남길 뿐이고, 그 폴더를 읽어 Notion 등으로 연결하는 일은 별도 프로그램 [`sticky`](../notion-memo-agent)가 합니다.
 
@@ -28,11 +28,11 @@ docs/DESIGN.md       설계서
 
 ```bash
 swift test                                   # StickyCore 테스트
-xcodegen generate                            # StickyNotes.xcodeproj 생성
-xcodebuild -scheme StickyNotes -configuration Debug -destination 'platform=macOS' build
+xcodegen generate                            # Memo4Me.xcodeproj 생성
+xcodebuild -scheme Memo4Me -configuration Debug -destination 'platform=macOS' build
 ```
 
-빌드된 앱은 `~/Library/Developer/Xcode/DerivedData/StickyNotes-*/Build/Products/Debug/StickyNotes.app`에 만들어집니다. 앱 이름은 "메모지", 번들 ID는 `com.kimerz.stickynotes`입니다(바꾸면 기존 메모가 든 앱 컨테이너를 찾지 못하므로 유지).
+빌드된 앱은 `~/Library/Developer/Xcode/DerivedData/Memo4Me-*/Build/Products/Debug/Memo4Me.app`에 만들어집니다. 앱 이름은 "Memo4Me", 번들 ID는 `com.kimerz.memo-for-me`입니다.
 
 ## 메모 폴더 (연결 규격)
 설정에서 고른 폴더에 아래를 남깁니다. 규격 전체는 `sticky` 저장소의 `docs/NOTE-APP-INTEGRATION-GUIDE.md`(Notes Source Contract v1)에 있습니다.

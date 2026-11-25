@@ -13,7 +13,7 @@ public struct KeychainKeyProvider: KeyProvider {
     private let service: String
     private let account = "secure-notes-master-key"
 
-    public init(service: String = "com.kimerz.stickynotes") { self.service = service }
+    public init(service: String = "com.kimerz.memo-for-me") { self.service = service }
 
     public func key() throws -> SymmetricKey {
         let query: [CFString: Any] = [

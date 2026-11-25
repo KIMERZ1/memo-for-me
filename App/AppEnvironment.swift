@@ -15,7 +15,7 @@ final class AppEnvironment {
 
     private init() {
         let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("StickyNotes", isDirectory: true)
+            .appendingPathComponent("Memo4Me", isDirectory: true)
         supportDirectory = base
         folderAccess = FolderAccess(defaults: .standard, defaultFolder: base.appendingPathComponent("Notes"))
         stateStore = WindowStateStore(fileURL: base.appendingPathComponent("state.json"))

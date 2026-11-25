@@ -14,7 +14,7 @@ final class StatusItemController: NSObject, NSMenuDelegate {
         self.onNewNote = onNewNote; self.onNewSecureNote = onNewSecureNote; self.onOpenSettings = onOpenSettings
         self.listProvider = listProvider; self.onOpenNote = onOpenNote
         super.init()
-        statusItem.button?.image = NSImage(systemSymbolName: "note.text", accessibilityDescription: "메모지")
+        statusItem.button?.image = NSImage(systemSymbolName: "note.text", accessibilityDescription: "Memo4Me")
         let menu = NSMenu()
         menu.addItem(item("메모지 추가", #selector(newNote)))
         menu.addItem(item("보안 메모지 추가", #selector(newSecureNote)))

@@ -1,6 +1,6 @@
-# 설계서: 메모지 앱 (memo-for-me)
+# 설계서: Memo4Me
 
-macOS 메뉴바 메모지 앱의 설계입니다. 구현된 상태를 기준으로 합니다. 이 앱의 메모를 Notion으로 올리는 `sticky`는 별도 저장소(`notion-memo-agent`)의 `docs/DESIGN.md`에 있습니다.
+macOS 메뉴바 메모지 앱 Memo4Me(저장소 `memo-for-me`)의 설계입니다. 구현된 상태를 기준으로 합니다. 이 앱의 메모를 Notion으로 올리는 `sticky`는 별도 저장소(`notion-memo-agent`)의 `docs/DESIGN.md`에 있습니다.
 
 ## 1. 의도와 원칙
 
@@ -78,7 +78,6 @@ Swift 6, macOS 14+. AppKit 중심(창·텍스트 편집), SwiftUI는 설정 화�
 | 앱은 파일로만 연결 | 앱이 Notion API 직접 호출 | 샌드박스 앱이 다른 프로그램을 실행할 수 없고, 토큰 보관과 보안 메모 경계가 복잡해짐 |
 | Space 복원은 공식 API만 | 비공개 CGS 함수 | 비공개 API는 쓰지 않음. 복원이 안 되면 현재 Space에 띄움 |
 | 보안 메모는 앱 컨테이너 안에만 | 사용자 폴더에 암호문 저장 | 사용자 폴더는 외부 프로그램이 읽을 수 있으므로 평문도 암호문도 두지 않음 |
-| 번들 ID `com.kimerz.stickynotes` 유지 | 새 이름으로 변경 | 바꾸면 기존 메모가 든 앱 컨테이너를 찾지 못함 |
 
 ## 7. 검증 현황
 
